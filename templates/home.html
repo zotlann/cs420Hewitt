@@ -1,0 +1,25 @@
+<style>
+.content{
+	max-width 500px;
+	margin: auto;
+}
+</style>
+
+<div class="content" align="center">
+	<title>Home</title>
+	Home<br><br> 
+	{%block content%}
+	{% if user.is_authenticated %}
+	<a href="../all-recipes/">View All Recipes</a><br><br>
+	<a href="../saved-recipes/">View Saved Recipes</a><br><br>
+	<a href="../random-recipes/">View Random Recipes</a><br><br>
+	<a href="../user-search/">User Search</a><br><br>
+	<a href="../user-profile/">User Profile</a><br><br>
+	<a href="../logout/">Log Out</a><br><br>
+	{% else %}
+	<a href="../all-recipes/">View All Recipes</a><br><br>
+	<a href="../random-recipes/">View Random Recipes</a><br><br>
+	<a href="../user-search/">User Search</a><br><br>
+	{% endif %}
+	{% endblock %}
+</div>
